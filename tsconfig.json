@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",               // Modern JS version
+    "module": "ES2022",               // Use ESM (import/export)
+    "moduleResolution": "node",       // How to find modules
+    "esModuleInterop": true,          // Better import handling
+    "strict": true,                   // Catch more bugs (we can loosen later if needed)
+    "skipLibCheck": true,             // Faster compile
+    "outDir": "./dist",               // Where compiled JS goes (if we build)
+    "rootDir": "./src"                // Your code lives in src
+  },
+  "include": ["src/**/*.ts"],         // Compile all .ts in src
+  "exclude": ["node_modules"]         // Ignore deps
+}

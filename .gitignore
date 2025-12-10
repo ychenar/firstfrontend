@@ -2,3 +2,6 @@
 /testt.http
 /note.txt
 /grok
+/package-lock.json
+/package.json
+/.gitignore

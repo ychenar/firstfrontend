@@ -1,5 +1,7 @@
 // src/routes/health.js
-export default async function healthRoutes(fastify, opts) {
+import { FastifyPluginAsync } from "fastify";
+
+export const healthRoute: FastifyPluginAsync = async (fastify, opts) => {
   fastify.get("/", async () => {
     return { status: "OK", timestamp: new Date().toISOString() };
   });

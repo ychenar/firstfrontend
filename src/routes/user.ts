@@ -1,8 +1,9 @@
 // src/routes/user.js
-import {userIdParam, createUserBody, userResponse} from '../schemas/userS.js';
-import {getUserHandler, createUserHandler} from '../handlers/userH.js';
+import { FastifyPluginAsync } from 'fastify';
+import {userIdParam, createUserBody, userResponse} from '../schemas/userS';
+import {getUserHandler, createUserHandler} from '../handlers/userH';
  
-export default async function userRoutes(fastify, opts) {
+export const userRoute: FastifyPluginAsync = async (fastify, opts) => {
 
   fastify.get("/", async (request, reply,) => {
     return "from the user route file, we are ORGANIZED now baby 🔥";
@@ -19,4 +20,4 @@ export default async function userRoutes(fastify, opts) {
       schema: {
         body: createUserBody,
         response: { 201: userResponse }}}, createUserHandler);
-}
+};
