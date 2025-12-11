@@ -8,7 +8,9 @@
     "start": "tsx src/server.ts",
     "startWithoutTypeSript": "node src/server.js",
     "devWithoutTypeScript": "nodemon src/server.js",
-    "dev": "nodemon --exec tsx src/server.ts"
+    "dev": "nodemon --exec tsx src/server.ts",
+    "build": "tsc",
+    "css": "npx @tailwindcss/cli -i ./public/input.css -o ./public/output.css --watch"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +20,9 @@
     "@fastify/cors": "^11.1.0",
     "@fastify/sensible": "^6.0.4",
     "@fastify/static": "^8.3.0",
-    "fastify": "^5.6.2"
+    "@tailwindcss/cli": "^4.1.17",
+    "fastify": "^5.6.2",
+    "tailwindcss": "^4.1.17"
   },
   "devDependencies": {
     "@types/node": "^24.10.3",
